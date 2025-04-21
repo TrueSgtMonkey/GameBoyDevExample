@@ -41,7 +41,8 @@ ROMEXT  := gb
 # "Sensible defaults" are included
 
 # Disable automatic `nop` after `halt`
-ASFLAGS += -h
+# TODO: Confirm that this should be removed
+# ASFLAGS += -h
 
 # Export all labels
 # This means they must all have unique names, but they will all show up in the
