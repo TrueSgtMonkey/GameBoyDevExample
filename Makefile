@@ -36,9 +36,9 @@ ROM = $(BINDIR)/$(ROMNAME).$(ROMEXT)
 # Argument constants
 INCDIRS  = src/ src/include/ src/bin/
 WARNINGS = all extra
-ASFLAGS  = -v -L -p $(PADVALUE) $(addprefix -i,$(INCDIRS)) $(addprefix -W,$(WARNINGS))
-LDFLAGS  = -p $(PADVALUE)
-FIXFLAGS = -p $(PADVALUE) -v -i "$(GAMEID)" -k "$(LICENSEE)" -l $(OLDLIC) -m $(MBC) -n $(VERSION) -r $(SRAMSIZE) -t $(TITLE)
+ASFLAGS  = -p ${PADVALUE} $(addprefix -I,${INCDIRS}) $(addprefix -W,${WARNINGS})
+LDFLAGS  = -p ${PADVALUE}
+FIXFLAGS = -p ${PADVALUE} -i "${GAMEID}" -k "${LICENSEE}" -l ${OLDLIC} -m ${MBC} -n ${VERSION} -r ${SRAMSIZE} -t ${TITLE}
 
 # The list of "root" ASM files that RGBASM will be invoked on
 SRCS = $(wildcard src/*.asm)
